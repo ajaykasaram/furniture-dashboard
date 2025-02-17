@@ -1,10 +1,9 @@
 services:
-  - type: web
+  - type: static
     name: furniture-dashboard
-    env: node
     buildCommand: npm install && npm run build
-    startCommand: npm run start
+    publishPath: dist
     envVars:
       - key: NODE_VERSION
         value: 18.x
-    staticPublishPath: ./dist
+    rootDir: .
